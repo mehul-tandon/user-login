@@ -50,6 +50,8 @@ cp .env.example .env
 # Edit .env with your JWT secrets (no database config needed!)
 ```
 
+⚠️ **SECURITY WARNING**: Never commit `.env` files or `data/` directory to version control!
+
 ### 3. Start the Development Server
 
 ```bash
@@ -101,6 +103,8 @@ npm run build
 - Files are automatically created on first run
 - **No database setup required!**
 
+⚠️ **SECURITY**: The `data/` directory is excluded from git to prevent exposing sensitive user data and JWT tokens.
+
 ## 🔗 API Endpoints
 
 ### Authentication
@@ -124,6 +128,16 @@ npm run build
 - Security headers with Helmet
 - File-based storage (no SQL injection possible)
 - Modern architecture for enhanced security
+
+### 🚨 Security Best Practices
+
+**NEVER commit sensitive data to version control:**
+- ❌ Don't commit `.env` files
+- ❌ Don't commit `data/` directory
+- ❌ Don't commit JWT tokens or user data
+- ✅ Use `.gitignore` to exclude sensitive files
+- ✅ Use environment variables for secrets
+- ✅ Rotate JWT secrets regularly in production
 
 ## 🧪 Testing
 

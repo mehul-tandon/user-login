@@ -37,3 +37,27 @@
 {"level":"info","message":"🌐 Frontend available at http://localhost:3000","service":"user-auth-system","timestamp":"2025-06-07T07:22:19.295Z"}
 {"level":"info","message":"✅ File storage initialized successfully","service":"user-auth-system","timestamp":"2025-06-07T07:22:19.298Z"}
 {"level":"info","message":"GET /api/health - ::1","service":"user-auth-system","timestamp":"2025-06-07T07:24:07.769Z"}
+{"level":"info","message":"🚀 Auth system running on port 3000 in production mode","service":"user-auth-system","timestamp":"2025-06-07T07:37:33.614Z"}
+{"level":"info","message":"📁 File-based storage initialized","service":"user-auth-system","timestamp":"2025-06-07T07:37:33.615Z"}
+{"level":"info","message":"🌐 Frontend available at http://localhost:3000","service":"user-auth-system","timestamp":"2025-06-07T07:37:33.615Z"}
+{"level":"info","message":"Initialized users.json file","service":"user-auth-system","timestamp":"2025-06-07T07:37:33.619Z"}
+{"level":"info","message":"Initialized refresh_tokens.json file","service":"user-auth-system","timestamp":"2025-06-07T07:37:33.626Z"}
+{"level":"info","message":"✅ File storage initialized successfully","service":"user-auth-system","timestamp":"2025-06-07T07:37:33.626Z"}
+{"level":"info","message":"🚀 Auth system running on port 3000 in development mode","service":"user-auth-system","timestamp":"2025-06-07T07:39:01.656Z"}
+{"level":"info","message":"📁 File-based storage initialized","service":"user-auth-system","timestamp":"2025-06-07T07:39:01.657Z"}
+{"level":"info","message":"🌐 Frontend available at http://localhost:3000","service":"user-auth-system","timestamp":"2025-06-07T07:39:01.657Z"}
+{"level":"info","message":"✅ File storage initialized successfully","service":"user-auth-system","timestamp":"2025-06-07T07:39:01.660Z"}
+{"level":"info","message":"GET /api/health - ::1","service":"user-auth-system","timestamp":"2025-06-07T08:00:49.896Z"}
+{"level":"info","message":"POST /api/auth/register - ::1","service":"user-auth-system","timestamp":"2025-06-07T08:00:49.937Z"}
+{"level":"info","message":"Users saved to file successfully","service":"user-auth-system","timestamp":"2025-06-07T08:00:50.313Z"}
+{"level":"info","message":"User created successfully: test1749283249780@example.com","service":"user-auth-system","timestamp":"2025-06-07T08:00:50.314Z"}
+{"level":"info","message":"Refresh tokens saved to file successfully","service":"user-auth-system","timestamp":"2025-06-07T08:00:50.323Z"}
+{"level":"info","message":"Refresh token stored for user: 1","service":"user-auth-system","timestamp":"2025-06-07T08:00:50.326Z"}
+{"level":"info","message":"User registered successfully: test1749283249780@example.com","service":"user-auth-system","timestamp":"2025-06-07T08:00:50.327Z"}
+{"level":"info","message":"POST /api/auth/login - ::1","service":"user-auth-system","timestamp":"2025-06-07T08:00:50.338Z"}
+{"level":"info","message":"GET /api/users/profile - ::1","service":"user-auth-system","timestamp":"2025-06-07T08:00:50.345Z"}
+{"level":"info","message":"POST /api/auth/refresh - ::1","service":"user-auth-system","timestamp":"2025-06-07T08:00:50.366Z"}
+{"level":"info","message":"POST /api/auth/logout - ::1","service":"user-auth-system","timestamp":"2025-06-07T08:00:50.373Z"}
+{"level":"info","message":"Refresh tokens saved to file successfully","service":"user-auth-system","timestamp":"2025-06-07T08:00:50.378Z"}
+{"level":"info","message":"Refresh token revoked for user: 1","service":"user-auth-system","timestamp":"2025-06-07T08:00:50.378Z"}
+{"level":"info","message":"User logged out successfully: 1","service":"user-auth-system","timestamp":"2025-06-07T08:00:50.379Z"}

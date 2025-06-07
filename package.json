@@ -11,7 +11,9 @@
     "test": "node scripts/test-api.js",
     "test:prod": "node scripts/test-api.js https://your-domain.vercel.app",
     "migrate": "node scripts/migrate-to-database.js",
-    "backup": "node scripts/migrate-to-database.js"
+    "backup": "node scripts/migrate-to-database.js",
+    "generate-secrets": "node scripts/generate-secrets.js --create",
+    "validate-env": "node scripts/generate-secrets.js --validate"
   },
   "keywords": [
     "authentication",
