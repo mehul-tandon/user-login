@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAuth - User Authentication System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <h1>SecureAuth</h1>
+            </div>
+            <p>Your secure authentication portal</p>
+            <div class="header-stats">
+                <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <span>Trusted by 1000+ users</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-lock"></i>
+                    <span>Bank-level security</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav id="nav">
+            <button id="showLogin" class="nav-btn active">
+                <i class="fas fa-sign-in-alt"></i>
+                <span>Login</span>
+            </button>
+            <button id="showRegister" class="nav-btn">
+                <i class="fas fa-user-plus"></i>
+                <span>Register</span>
+            </button>
+            <button id="showDashboard" class="nav-btn hidden">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </button>
+            <button id="logoutBtn" class="nav-btn hidden">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </button>
+        </nav>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="form-container">
+            <div class="form-header">
+                <i class="fas fa-sign-in-alt"></i>
+                <h2>Welcome Back!</h2>
+                <p>Sign in to your account</p>
+            </div>
+            <form id="loginFormElement">
+                <div class="form-group">
+                    <label for="loginEmail">
+                        <i class="fas fa-envelope"></i>
+                        Email Address
+                    </label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <div class="password-input">
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Sign In</span>
+                    <div class="btn-loader hidden"></div>
+                </button>
+            </form>
+            <div class="form-footer">
+                <p>Don't have an account? <a href="#" onclick="showRegister()">Create one here</a></p>
+            </div>
+        </div>
+
+        <!-- Register Form -->
+        <div id="registerForm" class="form-container hidden">
+            <div class="form-header">
+                <i class="fas fa-user-plus"></i>
+                <h2>Join SecureAuth</h2>
+                <p>Create your secure account</p>
+            </div>
+            <form id="registerFormElement">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">
+                            <i class="fas fa-user"></i>
+                            First Name
+                        </label>
+                        <input type="text" id="firstName" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">
+                            <i class="fas fa-user"></i>
+                            Last Name
+                        </label>
+                        <input type="text" id="lastName" placeholder="Doe" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">
+                        <i class="fas fa-envelope"></i>
+                        Email Address
+                    </label>
+                    <input type="email" id="registerEmail" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <div class="password-input">
+                        <input type="password" id="registerPassword" placeholder="Create a strong password" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword('registerPassword')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-requirements">
+                        <small><i class="fas fa-info-circle"></i> Must contain uppercase, lowercase, number, and special character</small>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Account</span>
+                    <div class="btn-loader hidden"></div>
+                </button>
+            </form>
+            <div class="form-footer">
+                <p>Already have an account? <a href="#" onclick="showLogin()">Sign in here</a></p>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard" class="form-container hidden">
+            <div class="dashboard-header">
+                <div class="welcome-section">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h2>Welcome to your Dashboard!</h2>
+                    <p>Manage your account and view your profile</p>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div id="userInfo" class="user-details">
+                        <div class="loading-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Loading user information...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Account Status</h3>
+                        <p id="accountStatus">Active</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Security Level</h3>
+                        <p>High</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Session</h3>
+                        <p>Active</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-actions">
+                    <button id="refreshProfile" class="btn btn-secondary">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Refresh Profile</span>
+                    </button>
+                    <button class="btn btn-outline">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div id="message" class="message hidden">
+            <div class="message-content">
+                <i class="message-icon"></i>
+                <span class="message-text"></span>
+                <button class="message-close" onclick="hideMessage()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 SecureAuth. Built with ❤️ for secure authentication.</p>
+        <div class="footer-links">
+            <a href="#"><i class="fas fa-shield-alt"></i> Security</a>
+            <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+            <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
