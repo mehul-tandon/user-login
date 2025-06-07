@@ -250,7 +250,7 @@ async function checkAuthAndShowDashboard() {
 
 async function loadUserProfile() {
     try {
-        const data = await apiCall('/auth/profile');
+        const data = await apiCall('/users/profile');
         currentUser = data.data.user;
 
         document.getElementById('userInfo').innerHTML = `

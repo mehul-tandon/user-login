@@ -71,5 +71,8 @@ const schemas = {
 
 module.exports = {
   validate,
-  schemas
+  schemas,
+  registerValidation: schemas.register,
+  loginValidation: schemas.login,
+  refreshTokenValidation: schemas.refreshToken
 };

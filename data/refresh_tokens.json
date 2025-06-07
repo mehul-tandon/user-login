@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "user_id": 1,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0OTI3ODg0MSwiZXhwIjoxNzUxODcwODQxLCJhdWQiOiJ1c2VyLWF1dGgtY2xpZW50IiwiaXNzIjoidXNlci1hdXRoLXN5c3RlbSJ9.alb5o_m-m766suPVE6C_ugjTwt1ohBrV3sh4MLnlr0g",
+    "expires_at": "2025-07-07T06:47:21.466Z",
+    "created_at": "2025-06-07T06:47:21.468Z"
+  }
+]

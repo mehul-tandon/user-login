@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "email": "john@example.com",
+    "password": "$2a$12$oyCy4beUF0woxtJfTU1UkOAwRbn6TPw6y4CfsG9xbTBt30GEM3aEK",
+    "first_name": "John",
+    "last_name": "Doe",
+    "is_verified": false,
+    "is_active": true,
+    "created_at": "2025-06-07T06:47:21.458Z",
+    "updated_at": "2025-06-07T06:47:21.458Z",
+    "last_login": null
+  },
+  {
+    "id": 2,
+    "email": "test1749279462795@example.com",
+    "password": "$2a$12$euMUK65DoZXK23wAqYy25ugzXTOQQtr1bZo6QwOZe1kER/mgwnWNC",
+    "first_name": "Test",
+    "last_name": "User",
+    "is_verified": false,
+    "is_active": true,
+    "created_at": "2025-06-07T06:57:43.176Z",
+    "updated_at": "2025-06-07T06:57:43.176Z",
+    "last_login": null
+  }
+]
